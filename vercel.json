@@ -1,5 +1,4 @@
 {
-    "verson":1,
     "builds":[
         {
             "src":"./server.js",
