@@ -5,12 +5,12 @@ const cors = require('cors');
 
 const app = express();
 const port = 3300;
-app.use(cors());
 mongoose.set('debug', true);
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 mongoose.connect('mongodb+srv://test01:test01@cluster0.ma9paxw.mongodb.net/mynewdatabase').then(() => {
 console.log("Connected to Database");
