@@ -5,7 +5,9 @@ const cors = require('cors');
 
 const app = express();
 const port = 3300;
-app.use(cors());
+app.use(cors({
+  origin: 'http://allowed-origin.com'
+}));
 mongoose.set('debug', true);
 
 
@@ -48,6 +50,3 @@ app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
 
-app.use(cors({
-    origin: 'http://allowed-origin.com'
-  }));
